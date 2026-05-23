@@ -13,6 +13,7 @@ The following modules were created to accomplish tone detection:
 3.	magnitude: To compute the magnitude of s (n).
 4.	counter: To keep count of the number of input samples processed and to give an enable signal to the magnitude blocks.
 5.	comparator: to compare magnitude values and generate a corresponding pattern.
+
 The above modules are instantiated in a top module.
 
 A Block RAM (BRAM) is created to store DTMF values. The DTMF values, for each key, that were generated through MATLAB, are compiled into a .coe file. The values from the .coe file are loaded into the BRAM at power-up. A control logic is written to fetch values from BRAM. These values are fed to the tone detection module. After DTMF tone detection process, patterns are obtained, based on which LEDs are made to glow. Constraint file (.xdc) is written to assign pins to the signals. The design is synthesized, implemented and a bitstream is generated. The bitstream is uploaded to the FPGA board. The tone selection is done through four DIP switches on the board. Output is observed through eight LEDs, four each for low group and high group patterns.
