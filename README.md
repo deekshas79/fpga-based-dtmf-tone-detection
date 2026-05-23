@@ -1,5 +1,8 @@
 The project was carried out in the following phases:
+
+
 <img width="940" height="691" alt="image" src="https://github.com/user-attachments/assets/95dac115-cdd4-41a0-8340-e70819bfbc0e" />
+
 - DTMF signal tones are generated using MATLAB.
 - The tone detection using Goertzel algorithm is implemented using Verilog HDL.
 - The tone detection is implemented on FPGA by exporting the Verilog code onto the board. The board used is AMD Kintex™ 7 FPGA KC705 Evaluation Kit.
